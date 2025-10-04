@@ -15,7 +15,7 @@ app = FastAPI(
 app.include_router(weather_router, prefix="/api", tags=["weather"])
 
 
-@app.get("/api")
+@app.get("/api", tags=["info"])
 def get_info():
     return {
         "project": settings.PROJECT_NAME,
